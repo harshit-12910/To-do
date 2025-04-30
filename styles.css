@@ -1,0 +1,42 @@
+body {
+  background-color: darkgray;
+}
+
+.first-heading {
+  text-align: center;
+  height: auto;
+  width: auto;
+  padding-top: 150px;
+  font-family: 'kumbh sans', sans-serif;
+  font-size: 50px;
+}
+
+.input {
+  text-align: center;
+}
+
+#add-input {
+  width: 350px;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#add-input::placeholder{
+  color: rgb(12, 8, 8);
+}
+
+.add-task{
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.list {
+  color: blue;
+  text-align: center;
+  padding-top: 50px;
+  list-style-type: none;
+}

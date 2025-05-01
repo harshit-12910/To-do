@@ -1,5 +1,5 @@
 body {
-  background-color: darkgray;
+  background-color: white;
 }
 
 .first-heading {
@@ -13,10 +13,11 @@ body {
 
 .input {
   text-align: center;
+
 }
 
 #add-input {
-  width: 350px;
+  width: 450px;
   padding: 10px;
   border-radius: 10px;
   color: rgb(0, 0, 0);
@@ -35,8 +36,30 @@ body {
 }
 
 .list {
-  color: blue;
+  padding-top: 40px;
   text-align: center;
-  padding-top: 50px;
-  list-style-type: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: 40px;
 }
+
+ul.list li {
+  border: 1px solid black;
+  color: black;
+  padding: 6px 10px;
+  list-style-type: none;
+  text-align: left;  
+  width: 480px;
+  margin-left: auto;     
+  margin-right: auto; 
+  border-radius: 5px;
+
+}
+
+.done {
+  text-decoration: line-through !important;
+  opacity: 0.7;
+}
+

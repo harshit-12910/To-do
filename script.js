@@ -10,8 +10,14 @@ addButton.addEventListener("click", function () {
 
   if (value !== "") {
     const li = document.createElement('li');
-    li.innerHTML = `<input class="checkbox" type="checkbox"><span class="task-text">${value}</span>`;
-    itemlist.prepend(li);
+    li.innerHTML = `
+    <label class="custom-checkbox">
+      <input class="checkbox" type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+    <span class="task-text">${value}</span>
+  `;
+      itemlist.prepend(li);
     userInput.value = "";  
     li.dataset.index = currentIndex++; // store original position
 

@@ -46,7 +46,7 @@ body {
 }
 
 ul.list li {
-  border: 1px solid black;
+  border: 2px solid black;
   color: black;
   padding: 6px 10px;
   list-style-type: none;
@@ -63,3 +63,31 @@ ul.list li {
   opacity: 0.7;
 }
 
+.checkbox {
+  appearance: none;  
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border: 2px solid black;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+}
+  
+  
+  
+.checkbox:checked::before {
+  content: '';  
+  display: block;  
+  background-color: black;  
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;  
+  top: 0;
+  left: 0;
+}
+  
+  

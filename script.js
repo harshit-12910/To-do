@@ -80,9 +80,9 @@ reorderItems(); // Initial reorder on page load (if there are any items initiall
 function updateDeleteButtonVisibility(){
   const checkedCheckboxes = itemlist.querySelectorAll('input[type="checkbox"]:checked');
   if (checkedCheckboxes.length > 0) {
-    deleteSelectedButton.style.display = 'block';
+    deleteSelectedButton.classList.add('visible');
   } else {
-    deleteSelectedButton.style.display = 'none';
+    deleteSelectedButton.classList.remove('visible');
   }
 }
 
@@ -103,3 +103,5 @@ deleteSelectedButton.addEventListener('click', function() {
   reorderItems();
   updateDeleteButtonVisibility();
 });
+
+updateDeleteButtonVisibility();

@@ -77,6 +77,20 @@ function reorderItems() {
 
 reorderItems(); // Initial reorder on page load (if there are any items initially)
 
+function updateDeleteButtonVisibility(){
+  const checkedCheckboxes = itemlist.querySelectorAll('input[type="checkbox"]:checked');
+  if (checkedCheckboxes.length > 0) {
+    deleteSelectedButton.style.display = 'block';
+  } else {
+    deleteSelectedButton.style.display = 'none';
+  }
+}
+
+itemlist.addEventListener('change', function(event) {
+  if (event.target.type === 'checkbox') {
+    updateDeleteButtonVisibility();
+  }
+});
 
 deleteSelectedButton.addEventListener('click', function() {
   const checkedItems = itemlist.querySelectorAll('li input[type="checkbox"]:checked');
@@ -87,4 +101,5 @@ deleteSelectedButton.addEventListener('click', function() {
   });
 
   reorderItems();
+  updateDeleteButtonVisibility();
 });

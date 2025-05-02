@@ -46,9 +46,11 @@ body {
 }
 
 ul.list li {
+  display: flex;
+  align-items: center;
   border: 2px solid black;
   color: black;
-  padding: 6px 10px;
+  padding: 8px 12px;
   list-style-type: none;
   text-align: left;  
   width: 480px;
@@ -61,6 +63,7 @@ ul.list li {
 .done {
   text-decoration: line-through !important;
   opacity: 0.7;
+  color: #888;
 }
 
 .checkbox {
@@ -90,4 +93,21 @@ ul.list li {
   left: 0;
 }
   
-  
+
+.custom-checkbox {
+  margin-right: 10px;
+}
+
+.task-text {
+  flex-grow: 1;
+  word-wrap: break-word; /* Or use overflow-wrap: break-word; */
+}
+
+.star-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 5px;
+}

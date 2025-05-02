@@ -101,6 +101,8 @@ ul.list li {
 .task-text {
   flex-grow: 1;
   word-wrap: break-word; /* Or use overflow-wrap: break-word; */
+  white-space: normal;
+  min-width: 0;
 }
 
 .star-btn {
@@ -111,3 +113,4 @@ ul.list li {
   cursor: pointer;
   padding: 5px;
 }
+

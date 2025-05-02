@@ -1,6 +1,7 @@
 const addButton = document.querySelector(".add-task");
 const userInput = document.getElementById("add-input");
 const itemlist = document.querySelector(".list");
+const deleteSelectedButton = document.querySelector(".delete-selected");
 let currentIndex = 0;
 
 addButton.addEventListener("click", function () {
@@ -75,3 +76,15 @@ function reorderItems() {
 }
 
 reorderItems(); // Initial reorder on page load (if there are any items initially)
+
+
+deleteSelectedButton.addEventListener('click', function() {
+  const checkedItems = itemlist.querySelectorAll('li input[type="checkbox"]:checked');
+
+  checkedItems.forEach(checkbox => {
+    const listItem = checkbox.parentNode.parentNode; 
+    itemlist.removeChild(listItem);
+  });
+
+  reorderItems();
+});

@@ -114,3 +114,21 @@ ul.list li {
   padding: 5px;
 }
 
+.delete-selected {
+  position: absolute; /* To position it relative to the input area or body */
+  top: 50px; /* Adjust as needed */
+  right: 10%; /* Adjust as needed */
+  transform: translateX(50%); /* To center it horizontally based on its own width */
+  padding: 8px 15px;
+  background-color: #f44336; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delete-selected:hover {
+  background-color: #d32f2f;
+}

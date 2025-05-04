@@ -9,25 +9,39 @@ addButton.addEventListener("click", function () {
 
   if (value !== "") {
     const li = document.createElement('li');
-    li.innerHTML = `
-      <label class="custom-checkbox">
-        <input class="checkbox" type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <span class="task-text">${value}</span>
-      <button class="star-btn">☆</button>
-    `;
+
+    const label = document.createElement('label');
+    label.classList.add('custom-checkbox');
+
+    const checkbox = document.createElement('input');
+    checkbox.classList.add('checkbox');
+    checkbox.type = 'checkbox';
+
+    const checkmark = document.createElement('span');
+    checkmark.classList.add('checkmark');
+
+    label.appendChild(checkbox);
+    label.appendChild(checkmark);
+
+    const taskTextSpan = document.createElement('span');
+    taskTextSpan.classList.add('task-text');
+    taskTextSpan.textContent = value; // Use textContent here!
+
+    const starBtn = document.createElement('button');
+    starBtn.classList.add('star-btn');
+    starBtn.textContent = '☆';
+
+    li.appendChild(label);
+    li.appendChild(taskTextSpan);
+    li.appendChild(starBtn);
+
     itemlist.prepend(li);
     userInput.value = "";
     li.dataset.index = currentIndex++;
-
-    const checkbox = li.querySelector(".checkbox");
-    const span = li.querySelector(".task-text");
-    const starBtn = li.querySelector(".star-btn");
     li.dataset.starred = "false";
 
     checkbox.addEventListener('change', function () {
-      span.classList.toggle("done", this.checked);
+      taskTextSpan.classList.toggle("done", this.checked);
       reorderItems(); // Reorder on checkbox change
     });
 
